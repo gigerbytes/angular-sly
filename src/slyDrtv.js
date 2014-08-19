@@ -79,6 +79,26 @@ angularSly.directive('slyVertical', function(){
 
 //METHODS
 
+//Positioning
+angularSly.directive('slyToBegin', function(){ //slyToStart doesnt seem to work :( 
+	return {
+		restrict: 'A',
+		link: function (scope, el, attrs){
+			el.on('click', function () {
+				console.log(attrs);
+				// Need to pass the sly frame element Id
+				var frame = $('#'+attrs.slyFrame);
+				var item = attrs.slyDataItem || undefined;
+				
+				// Animate a particular item to the start of the frame.
+				// If no item is provided, the whole content will be animated.
+				frame.sly('toStart', item);
+			});
+
+		},
+	}
+});
+
 angularSly.directive('slyToCenter', function(){
 	return {
 		restrict: 'A',
@@ -88,7 +108,7 @@ angularSly.directive('slyToCenter', function(){
 				var frame = $('#'+attrs.slyFrame);
 				var item = attrs.slyDataItem || undefined;
 				
-				// Animate a particular item to the start of the frame.
+				// Animate a particular item to the center of the frame.
 				// If no item is provided, the whole content will be animated.
 				frame.sly('toCenter', item);
 			});
