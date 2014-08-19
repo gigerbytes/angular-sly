@@ -4,7 +4,11 @@ angular-sly
 Angular directives for the [Sly](http://github.com/darsain/sly) javascript library
 
 I have only ported horizontal and vertical scrolling, so far.
-
+## Installlation: 
+ 
+```
+bower install angular-sly
+```
 ##Usage:
 
 Set 'sly-horizontal' or 'sly-vertical' as an attribute to the frame of your slidee.
