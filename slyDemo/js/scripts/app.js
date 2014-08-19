@@ -3,7 +3,7 @@ var angularSlyDemo = angular.module('angular-sly-demo',['ngRoute','angular-sly']
 
     $routeProvider
     	.when('/', {
-    		templateUrl: '/index',
+    		templateUrl: 'views/landing.html',
     	})
     	.when('/horizontal', {
     		templateUrl: 'views/horizontal.html',
