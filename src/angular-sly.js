@@ -1,0 +1,1 @@
+var angularSly = angular.module('angular-sly', []);
