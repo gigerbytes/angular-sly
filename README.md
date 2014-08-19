@@ -1,7 +1,7 @@
 angular-sly
 ===========
 
-Angular directives for the (Sly)[http://github.com/darsain/sly] javascript library
+Angular directives for the [Sly](http://github.com/darsain/sly) javascript library
 
 I have only ported horizontal and vertical scrolling, so far.
 
