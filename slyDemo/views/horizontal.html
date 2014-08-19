@@ -8,7 +8,7 @@
                     <div class="mousearea"></div>
                 </div>
             </div>
-            <div class="frame" sly-horizontal>
+            <div class="frame" sly-horizontal id="basicSly">
                 <ul class="clearfix">
                     <li>0</li>
                     <li>1</li>
@@ -49,12 +49,12 @@
                 <button class="btn backward"><i class="icon-chevron-left"></i> move</button>
                 <div class="btn-group">
                     <button class="btn toStart">toStart</button>
-                    <button class="btn toCenter">toCenter</button>
+                    <button class="btn toCenter" sly-to-center sly-frame="basicSly">toCenter</button>
                     <button class="btn toEnd">toEnd</button>
                 </div>
                 <div class="btn-group">
                     <button class="btn toStart" data-item="10"><strong>10</strong> toStart</button>
-                    <button class="btn toCenter" data-item="10"><strong>10</strong> toCenter</button>
+                    <button class="btn toCenter" sly-to-center sly-frame="basicSly" sly-data-item="10"><strong>10</strong> toCenter</button>
                     <button class="btn toEnd" data-item="10"><strong>10</strong> toEnd</button>
                 </div>
                 <div class="btn-group">

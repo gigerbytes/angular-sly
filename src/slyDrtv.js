@@ -76,3 +76,23 @@ angularSly.directive('slyVertical', function(){
 		},
 	}
 });
+
+//METHODS
+
+angularSly.directive('slyToCenter', function(){
+	return {
+		restrict: 'A',
+		link: function (scope, el, attrs){
+			el.on('click', function () {
+				// Need to pass the sly frame element Id
+				var frame = $('#'+attrs.slyFrame);
+				var item = attrs.slyDataItem || undefined;
+				
+				// Animate a particular item to the start of the frame.
+				// If no item is provided, the whole content will be animated.
+				frame.sly('toCenter', item);
+			});
+
+		},
+	}
+});
