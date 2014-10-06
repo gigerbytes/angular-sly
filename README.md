@@ -12,7 +12,18 @@ bower install angular-sly
 ##Usage:
 
 ###Sly Frame
-Set 'sly-horizontal' or 'sly-vertical' as an attribute to the frame of your slidee.
+For normal lists:
+Set `sly-horizontal` or `sly-vertical` as an attribute to the frame of your slidee. e.g.
+```
+	<div class="frame" sly-horizontal id="basicSly">
+```
+
+If you are using ng-repeat:
+Set `sly-horizontal-repeat` or `sly-vertical-repeat` as an attribute of the tag with ng-repeat e.g.
+
+```
+	<li ng-repeat="box in repeatData" sly-horizontal-repeat >{{box.num}}</li>
+```
 
 'sly-options' is an object that will allow you to set the custom options. The default options are:
 
