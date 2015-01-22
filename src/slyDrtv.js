@@ -15,8 +15,7 @@ var defaultOptions = {
 	easing: 'easeOutExpo',
 	dragHandle: 1,
 	dynamicHandle: 1,
-	clickBar: 1,
-
+	clickBar: 1
 };
 
 //DIRECTIVE PROPER
@@ -42,8 +41,8 @@ angularSly.directive('slyHorizontal', function(){
 				prev: wrap.find('.prev') || null,
 				next: wrap.find('.next') || null,
 				prevPage: wrap.find('.prevPage') || null,
-				nextPage: wrap.find('.nextPage') || null,
-			}
+				nextPage: wrap.find('.nextPage') || null
+			};
 			// Merge parts into options object for sly argument
 			var options =  $.extend({}, defaultOptions, defaultControls, scope.$eval(attrs.slyOptions));
 			var callback = scope.$eval(attrs.slyCallback) || function(cb){};
@@ -52,7 +51,7 @@ angularSly.directive('slyHorizontal', function(){
 			//         scope.$emit('ngRepeatFinished');
 			//     });
 			// }
-		},
+		}
 	}
 });
 
@@ -75,8 +74,8 @@ angularSly.directive('slyVertical', function(){
 				prev: wrap.find('.prev') || null,
 				next: wrap.find('.next') || null,
 				prevPage: wrap.find('.prevPage') || null,
-				nextPage: wrap.find('.nextPage') || null,
-			}
+				nextPage: wrap.find('.nextPage') || null
+			};
 			
 			// Merge parts into options object for sly argument
 			var options =  $.extend({}, defaultOptions, defaultControls, scope.$eval(attrs.slyOptions));
@@ -85,7 +84,7 @@ angularSly.directive('slyVertical', function(){
 			frame.sly(options, callback());
 			    });
 			}
-		},
+		}
 	}
 });
 
@@ -113,8 +112,8 @@ angularSly.directive('slyHorizontalRepeat',  function($timeout){
 				prev: wrap.find('.prev') || null,
 				next: wrap.find('.next') || null,
 				prevPage: wrap.find('.prevPage') || null,
-				nextPage: wrap.find('.nextPage') || null,
-			}
+				nextPage: wrap.find('.nextPage') || null
+			};
 			// Merge parts into options object for sly argument
 			var options =  $.extend({}, defaultOptions, defaultControls, scope.$eval(attrs.slyOptions));
 			var callback = scope.$eval(attrs.slyCallback) || function(cb){};
@@ -123,7 +122,7 @@ angularSly.directive('slyHorizontalRepeat',  function($timeout){
 			//         scope.$emit('ngRepeatFinished');
 			    });
 			}
-		},
+		}
 	}
 });
 
@@ -144,15 +143,15 @@ angularSly.directive('slyVerticalRepeat', function(){
 				prev: wrap.find('.prev') || null,
 				next: wrap.find('.next') || null,
 				prevPage: wrap.find('.prevPage') || null,
-				nextPage: wrap.find('.nextPage') || null,
-			}
+				nextPage: wrap.find('.nextPage') || null
+			};
 			
 			// Merge parts into options object for sly argument
 			var options =  $.extend({}, defaultOptions, defaultControls, scope.$eval(attrs.slyOptions));
 			var callback = scope.$eval(attrs.slyCallback) || function(cb){};
 			// Call Sly on frame
 			frame.sly(options, callback());
-		},
+		}
 	}
 });
 
@@ -173,7 +172,7 @@ angularSly.directive('slyToBegin', function(){ //slyToStart doesnt seem to work 
 				frame.sly('toStart', item);
 			});
 
-		},
+		}
 	}
 });
 
@@ -190,7 +189,7 @@ angularSly.directive('slyToCenter', function(){
 				frame.sly('toCenter', item);
 			});
 
-		},
+		}
 	}
 });
 
@@ -208,7 +207,7 @@ angularSly.directive('slyToEnd', function(){
 				frame.sly('toEnd', item);
 			});
 
-		},
+		}
 	}
 });
 
