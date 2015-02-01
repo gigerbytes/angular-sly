@@ -59,8 +59,6 @@ angularSly.directive('slyVertical', function(){
 	return {
 		restrict: 'A',
 		link: function (scope, el, attrs){
-			if (scope.$last === true) {
-			 	$timeout(function () {
 
 			var frame = $(el);
 			var wrap  = $(el[0]).parent();
@@ -82,8 +80,6 @@ angularSly.directive('slyVertical', function(){
 			var callback = scope.$eval(attrs.slyCallback) || function(cb){};
 			// Call Sly on frame
 			frame.sly(options, callback());
-			    });
-			}
 		}
 	}
 });
