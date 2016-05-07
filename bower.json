@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "angular": "~1.5.5",
-    "sly": "~1.2.3",
+    "sly": "~1.6.1",
     "jquery": "~2.2.3",
     "bootstrap": "~3.3.2",
     "jquery-ui": "~1.11.2",
