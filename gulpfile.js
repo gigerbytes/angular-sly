@@ -1,8 +1,9 @@
-var gulp = require('gulp'),
+	var gulp = require('gulp'),
 	uglify 		= require('gulp-uglify'),
 	concat		= require('gulp-concat'),
 	rename		= require('gulp-rename'),
-	ngmin		= require('gulp-ngmin');
+	ngmin		= require('gulp-ngmin')
+	// ngAnnotate		= require('gulp-ng-annotate');
 
 gulp.task('build', function() { 
 	return gulp.src(['src/angular-sly.js','src/slyDrtv.js'])

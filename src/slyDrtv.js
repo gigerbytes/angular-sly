@@ -27,7 +27,7 @@ angularSly.directive('slyHorizontal', function(){
 	return {
 		restrict: 'A',
 		link: function (scope, el, attrs){
-
+			$(window).on("resize", function() { frame.sly("reload"); });
 			var frame = $(el);
 			var wrap  = $(el[0]).parent();
 
@@ -92,6 +92,7 @@ angularSly.directive('slyHorizontalRepeat',  function($timeout){
 	return {
 		restrict: 'A',
 		link: function (scope, el, attrs){
+			$(window).on("resize", function() { frame.sly("reload"); });
 			if (scope.$last === true) {
 			 	$timeout(function () {
 

@@ -1,4 +1,43 @@
-var angularSly = angular.module('angular-sly', []);
+var angularSly = angular.module('angular-sly', [
+    'ngRoute',
+    'angular-sly'
+  ]).config([
+    '$routeProvider',
+    '$locationProvider',
+    function ($routeProvider, $locationProvider) {
+      $routeProvider.when('/', { templateUrl: 'views/landing.html' }).when('/horizontal', { templateUrl: 'views/horizontal.html' }).when('/vertical', { templateUrl: 'views/vertical.html' }).when('/ngRepeat', { templateUrl: 'views/ngRepeat.html' }).otherwise({ redirectTo: '/' });
+      $locationProvider.html5Mode(false);
+    }
+  ]).controller('MainCtrl', [
+    '$scope',
+    '$timeout',
+    function ($scope, $timeout) {
+      $scope.repeatData = [
+        { 'num': '0' },
+        { 'num': '1' },
+        { 'num': '2' },
+        { 'num': '3' },
+        { 'num': '4' },
+        { 'num': '5' },
+        { 'num': '6' },
+        { 'num': '7' },
+        { 'num': '8' },
+        { 'num': '9' },
+        { 'num': '10' },
+        { 'num': '0' },
+        { 'num': '1' },
+        { 'num': '2' },
+        { 'num': '3' },
+        { 'num': '4' },
+        { 'num': '5' },
+        { 'num': '6' },
+        { 'num': '7' },
+        { 'num': '8' },
+        { 'num': '9' },
+        { 'num': '10' }
+      ];
+    }
+  ]);
 'use strict';
 //DEFAULTS
 var defaultOptions = {
@@ -26,6 +65,9 @@ angularSly.directive('slyHorizontal', function () {
   return {
     restrict: 'A',
     link: function (scope, el, attrs) {
+      $(window).on('resize', function () {
+        frame.sly('reload');
+      });
       var frame = $(el);
       var wrap = $(el[0]).parent();
       defaultOptions.horizontal = 1;
@@ -86,6 +128,9 @@ angularSly.directive('slyHorizontalRepeat', [
     return {
       restrict: 'A',
       link: function (scope, el, attrs) {
+        $(window).on('resize', function () {
+          frame.sly('reload');
+        });
         if (scope.$last === true) {
           $timeout(function () {
             var frame = $(el[0]).parent().parent();
