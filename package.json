@@ -7,7 +7,7 @@
     "sly",
     "directives"
   ],
-  "main": "dist/angular-sly",
+  "main": "dist/angular-sly.js",
   "dependencies": {
     "": "",
     "gulp": "^3.9.1",

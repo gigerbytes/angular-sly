@@ -22,6 +22,7 @@
     "test",
     "tests"
   ],
+  "main": "dist/angular-sly.js",
   "dependencies": {
     "angular": "~1.5.5",
     "sly": "~1.6.1",
